@@ -1,0 +1,632 @@
+#%RAML 1.0
+title: CSO2 Inventory Service
+description: The inventory's service API, meant to be used internally.
+version: 0.0.1
+
+types:
+  UserInventoryItem:
+    description: An inventory item.
+    properties:
+      itemId:
+        type: integer
+        description: The item's ID number
+      ammount:
+        type: integer
+        description: The ammount of an item
+        minimum: 1
+  UserInventory:
+    description: An user's inventory
+    properties: 
+      ownerId:
+        type: integer
+        description: The owning user's ID
+      items:
+        type: UserInventoryItem[]
+        description: The user's items
+  UserCosmetics:
+    description: An user's equipped cosmetics.
+    properties:
+      ownerId:
+        type: integer
+        description: The owning user's ID
+      ctItem:
+        type: integer
+        description: The loadout's CT character item ID
+      terItem:
+        type: integer
+        description: The loadout's Terrorist character item ID
+      headItem:
+        type: integer
+        description: The loadout's head wearable item ID
+      gloveItem:
+        type: integer
+        description: The loadout's glove wearable item ID
+      backItem:
+        type: integer
+        description: The loadout's backpack wearable item ID
+      stepsItem:
+        type: integer
+        description: The loadout's footsteps item ID
+      cardItem:
+        type: integer
+        description: The loadout's card item ID
+      sprayItem:
+        type: integer
+        description: The loadout's spray item ID
+  UserLoadout:
+    description: An user's inventory loadout.
+    properties:
+      ownerId:
+        type: integer
+        description: The owning user's ID
+      loadoutNum: 
+        type: integer
+        description: The user's loadout number
+        minimum: 0
+        maximum: 2
+      primary: 
+        type: integer
+        description: The user's loadout primary weapon item ID
+      secondary: 
+        type: integer
+        description: The user's loadout secondary weapon item ID
+      melee: 
+        type: integer
+        description: The user's loadout melee weapon item ID
+      hegrenade: 
+        type: integer
+        description: The user's loadout explosive grenade item ID
+      flash: 
+        type: integer
+        description: The user's loadout flashbang item ID
+      smoke: 
+        type: integer
+        description: The user's loadout smoke grenade item ID
+  UserBuyMenu:
+    description: An user's inventory buy menu details.
+    properties: 
+      ownerId:
+        type: integer
+        description: The owning user's ID
+      pistols?: 
+        type: integer[]
+        description: The user's pistols buy sub menu
+      shotguns?: 
+        type: integer[]
+        description: The user's shotguns buy sub menu
+      smgs?: 
+        type: integer[]
+        description: The user's SMGs buy sub menu
+      rifles?: 
+        type: integer[]
+        description: The user's rifles buy sub menu
+      snipers?: 
+        type: integer[]
+        description: The user's snipers buy sub menu
+      machineguns?: 
+        type: integer[]
+        description: The user's machine guns buy sub menu
+      melees?: 
+        type: integer[]
+        description: The user's melees buy sub menu
+      equipment?: 
+        type: integer[]
+        description: The user's equipment buy sub menu
+
+/inventory/{userId}:
+  description: The inventory's API base
+  uriParameters:
+    userId:
+      type: integer
+      description: The user's ID number.
+  get: 
+    description: Request an user's inventory items           
+    responses:
+      200:
+        description: The user's inventory items
+        body:
+          application/json:
+            type: UserInventory
+            description: The requested user's inventory.
+            example:
+              ownerId: 123
+              items:
+                - itemId: 100
+                  ammount: 3
+                - itemId: 200
+                  ammount: 1
+      400:
+        description: The request is malformed.
+      404:
+        description: The user does not exist.
+      500:
+        description: An unknown internal error occured.
+  post:
+    description: Create an inventory for an user. 
+    responses:
+      200:
+        description: The inventory was created successfully
+        body:
+          application/json:
+            type: UserInventory
+            description: The new user's inventory.
+            example:
+              ownerId: 123
+              items:
+                - itemId: 100
+                  ammount: 3
+                - itemId: 200
+                  ammount: 1
+      400:
+        description: The request is malformed.
+      409:
+        description: The user already has an inventory.
+      500:
+        description: An unknown internal error occured
+  delete: 
+    description: Delete an user's inventory.
+    responses:
+      200:
+        description: The inventory was removed successfully
+      400:
+        description: The request is malformed.
+      404:
+        description: The user does not exist.
+      500:
+        description: An unknown internal error occured.
+  /item: 
+    put:
+      description: Add item to an user's inventory
+      body:
+        application/json:   
+          type: UserInventoryItem
+          description: The new item to add to an user's inventory.
+          example:
+            itemId: 10092
+            ammount: 1          
+      responses:
+        200:
+          description: The item was added successfully
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    delete: 
+      description: Remove an item in an user's inventory
+      body:
+        application/json:   
+          type: UserInventoryItem
+          description: The item to delete from an user's inventory.
+          example:
+            itemId: 10044
+            ammount: 1          
+      responses:
+        200:
+          description: The item was removed successfully
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+  /cosmetics:
+    get:
+      description: Request an user's currently equipped cosmetics.          
+      responses:
+        200:
+          description: The user's currently equipped cosmetics.
+          body:
+            application/json:
+              type: UserCosmetics
+              example:
+                ownerId: 123
+                ctItem: 1033
+                terItem: 1034
+                headItem: 10062
+                gloveItem: 30018
+                backItem: 20042
+                stepsItem: 40016
+                cardItem: 60001
+                sprayItem: 42003
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    post:
+      description: Create cosmetic slots for an user. 
+      responses:
+        200:
+          description: The cosmetic slots were created successfully
+          body:
+            application/json:
+              type: UserCosmetics
+              description: The new user's cosmetic slots.
+              example:
+                ownerId: 123
+                ctItem: 1033
+                terItem: 1034
+                headItem: 10062
+                gloveItem: 30018
+                backItem: 20042
+                stepsItem: 40016
+                cardItem: 60001
+                sprayItem: 42003
+        400:
+          description: The request is malformed.
+        409:
+          description: The user already has cosmetic slots.
+        500:
+          description: An unknown internal error occured
+    put:
+      description: Set an user's equipped cosmetics
+      body:
+        application/json:   
+          type: UserCosmetics
+          description: The new cosmetics to equip in an user's inventory.
+          example:
+            ownerId: 123
+            ctItem: 1033
+            terItem: 1034
+            headItem: 10062
+            gloveItem: 30018
+            backItem: 20042
+            stepsItem: 40016
+            cardItem: 60001
+            sprayItem: 42003             
+      responses:
+        200:
+          description: The cosmetics were set sucessfully.
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    delete: 
+      description: Delete an user's cosmetic slots.
+      responses:
+        200:
+          description: The cosmetic slots were removed successfully
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+  /loadout:
+    get:
+      description: Request an user's loadout.
+      body:
+        application/json:   
+          properties:
+            loadoutNum:
+              type: integer
+              description: The requested user's loadout number
+              example: 0
+      responses:
+        200:
+          description: The user's loadout details.
+          body:
+            application/json:
+              type: UserLoadout
+              example:
+                ownerId: 123
+                loadoutNum: 0
+                primary: 5218
+                secondary: 5288
+                melee: 84
+                hegrenade: 4
+                flash: 23
+                smoke: 8
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    post:
+      description: Create loadouts for an user. 
+      responses:
+        200:
+          description: The loadouts were created successfully
+          body:
+            application/json:
+              type: UserLoadout[]
+              description: The new user's loadouts.
+              example:
+                - ownerId: 123
+                  loadoutNum: 0
+                  primary: 5336
+                  secondary: 5288
+                  melee: 5330
+                  hegrenade: 4
+                  flash: 23
+                  smoke: 8
+                - ownerId: 123
+                  loadoutNum: 1
+                  primary: 5285
+                  secondary: 5294
+                  melee: 5231
+                  hegrenade: 4
+                  flash: 23
+                  smoke: 8
+                - ownerId: 123
+                  loadoutNum: 2
+                  primary: 5206
+                  secondary: 5356
+                  melee: 5365
+                  hegrenade: 4
+                  flash: 23
+                  smoke: 8
+        400:
+          description: The request is malformed.
+        409:
+          description: The user already has loadouts.
+        500:
+          description: An unknown internal error occured
+    put:
+      description: Set an user's loadout
+      body:
+        application/json:   
+          type: UserLoadout
+          description: The new loadout to set in an user's inventory.
+          example:
+            ownerId: 123
+            loadoutNum: 0
+            primary: 5218
+            secondary: 5288
+            melee: 84
+            hegrenade: 4
+            flash: 23
+            smoke: 8       
+      responses:
+        200:
+          description: The cosmetics were set sucessfully.
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    delete: 
+      description: Delete an user's loadouts.
+      responses:
+        200:
+          description: The loadouts were removed successfully
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+  /buymenu:
+    get:
+      description: Request an user's buy menu.
+      responses:
+        200:
+          description: The user's current buy menu.
+          body:
+            application/json:
+              type: UserBuyMenu
+              description: The current buy menu data.
+              example:
+                ownerId: 123
+                pistols: 
+                  - 5271
+                  - 5245
+                  - 5358
+                  - 5288
+                  - 106
+                  - 5119
+                  - 5121
+                  - 5360
+                  - 5294
+                shotguns: 
+                  - 5130
+                  - 5181
+                  - 5157
+                  - 5282
+                  - 5286
+                  - 5343
+                  - 5264
+                  - 5265
+                  - 5230
+                smgs: 
+                  - 5251
+                  - 5295
+                  - 162
+                  - 5132
+                  - 5346
+                  - 5320
+                  - 5287
+                  - 5321
+                  - 5310
+                rifles: 
+                  - 5136
+                  - 5142
+                  - 45
+                  - 46
+                  - 5218
+                  - 5240
+                  - 5259
+                  - 5309
+                  - 5370
+                snipers: 
+                  - 5133
+                  - 5118
+                  - 5216
+                  - 86
+                  - 5338
+                  - 5241
+                  - 5225
+                  - 5369
+                  - 5244
+                machineguns: 
+                  - 5125
+                  - 5289
+                  - 5226
+                  - 5332
+                  - 5352
+                  - 5363
+                  - 5311
+                  - 5260
+                  - 5234
+                melees: 
+                  - 5353
+                  - 5362
+                  - 5330
+                  - 5303
+                  - 5304
+                  - 5305
+                  - 5365
+                  - 5231
+                  - 5232
+                equipment: 
+                  - 36
+                  - 37
+                  - 23
+                  - 4
+                  - 7
+                  - 34
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    post:
+      description: Create a buy menu for an user.
+      responses:
+        200:
+          description: The loadouts were created successfully
+          body:
+            application/json:
+              type: UserBuyMenu
+              description: The new user's buy menu.
+              example:
+                ownerId: 123
+                pistols: 
+                  - 5271
+                  - 5245
+                  - 5358
+                  - 5288
+                  - 106
+                  - 5119
+                  - 5121
+                  - 5360
+                  - 5294
+                shotguns: 
+                  - 5130
+                  - 5181
+                  - 5157
+                  - 5282
+                  - 5286
+                  - 5343
+                  - 5264
+                  - 5265
+                  - 5230
+                smgs: 
+                  - 5251
+                  - 5295
+                  - 162
+                  - 5132
+                  - 5346
+                  - 5320
+                  - 5287
+                  - 5321
+                  - 5310
+                rifles: 
+                  - 5136
+                  - 5142
+                  - 45
+                  - 46
+                  - 5218
+                  - 5240
+                  - 5259
+                  - 5309
+                  - 5370
+                snipers: 
+                  - 5133
+                  - 5118
+                  - 5216
+                  - 86
+                  - 5338
+                  - 5241
+                  - 5225
+                  - 5369
+                  - 5244
+                machineguns: 
+                  - 5125
+                  - 5289
+                  - 5226
+                  - 5332
+                  - 5352
+                  - 5363
+                  - 5311
+                  - 5260
+                  - 5234
+                melees: 
+                  - 5353
+                  - 5362
+                  - 5330
+                  - 5303
+                  - 5304
+                  - 5305
+                  - 5365
+                  - 5231
+                  - 5232
+                equipment: 
+                  - 36
+                  - 37
+                  - 23
+                  - 4
+                  - 7
+                  - 34
+        400:
+          description: The request is malformed.
+        409:
+          description: The user already has a buy menu.
+        500:
+          description: An unknown internal error occured
+    put:
+      description: Set an user's buy sub menu
+      body:
+        application/json:   
+          type: UserBuyMenu
+          description: The buy menu to set in an user's inventory.
+          example:   
+            ownerId: 123
+            smgs: 
+              - 5251
+              - 5295
+              - 162
+              - 5132
+              - 5346
+              - 5320
+              - 5287
+              - 5321
+              - 5310  
+      responses:
+        200:
+          description: The sub menu was set sucessfully.
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
+    delete: 
+      description: Delete an user's buy menu.
+      responses:
+        200:
+          description: The buy menu was removed successfully
+        400:
+          description: The request is malformed.
+        404:
+          description: The user does not exist.
+        500:
+          description: An unknown internal error occured.
