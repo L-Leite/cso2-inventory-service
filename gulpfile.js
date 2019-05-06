@@ -27,7 +27,7 @@ gulp.task('readme', () => {
       excludeExternals: true,
       ignoreCompilerErrors: false,
       includeDeclarations: true,
-      name: 'cso2-users-service',
+      name: 'cso2-inventory-service',
       out: './docs',
       plugins: ['mdFlavour github'],
       theme: 'markdown',
