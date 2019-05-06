@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/loadout"](../modules/_entities_loadout_.md) > [InventoryLoadout](../classes/_entities_loadout_.inventoryloadout.md)
+[cso2-inventory-service](../README.md) > ["entities/loadout"](../modules/_entities_loadout_.md) > [InventoryLoadout](../classes/_entities_loadout_.inventoryloadout.md)
 
 # Class: InventoryLoadout
 
@@ -42,7 +42,7 @@ stores an user's loadout items at a slot
 
 **● flash**: *`number`*
 
-*Defined in entities/loadout.ts:109*
+*Defined in [entities/loadout.ts:100](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L100)*
 
 ___
 <a id="hegrenade"></a>
@@ -51,7 +51,7 @@ ___
 
 **● hegrenade**: *`number`*
 
-*Defined in entities/loadout.ts:107*
+*Defined in [entities/loadout.ts:98](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L98)*
 
 ___
 <a id="loadoutnum"></a>
@@ -60,7 +60,7 @@ ___
 
 **● loadoutNum**: *`number`*
 
-*Defined in entities/loadout.ts:99*
+*Defined in [entities/loadout.ts:90](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L90)*
 
 ___
 <a id="melee"></a>
@@ -69,7 +69,7 @@ ___
 
 **● melee**: *`number`*
 
-*Defined in entities/loadout.ts:105*
+*Defined in [entities/loadout.ts:96](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L96)*
 
 ___
 <a id="ownerid"></a>
@@ -78,7 +78,7 @@ ___
 
 **● ownerId**: *`number`*
 
-*Defined in entities/loadout.ts:97*
+*Defined in [entities/loadout.ts:88](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L88)*
 
 ___
 <a id="primary"></a>
@@ -87,7 +87,7 @@ ___
 
 **● primary**: *`number`*
 
-*Defined in entities/loadout.ts:101*
+*Defined in [entities/loadout.ts:92](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L92)*
 
 ___
 <a id="secondary"></a>
@@ -96,7 +96,7 @@ ___
 
 **● secondary**: *`number`*
 
-*Defined in entities/loadout.ts:103*
+*Defined in [entities/loadout.ts:94](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L94)*
 
 ___
 <a id="smoke"></a>
@@ -105,7 +105,7 @@ ___
 
 **● smoke**: *`number`*
 
-*Defined in entities/loadout.ts:111*
+*Defined in [entities/loadout.ts:102](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L102)*
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **create**(userId: *`number`*): `Promise`<[InventoryLoadout](_entities_loadout_.inventoryloadout.md)[]>
 
-*Defined in entities/loadout.ts:40*
+*Defined in [entities/loadout.ts:38](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L38)*
 
 create loadouts for an user
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **get**(loadoutNum: *`number`*, userId: *`number`*): `Promise`<[InventoryLoadout](_entities_loadout_.inventoryloadout.md)>
 
-*Defined in entities/loadout.ts:30*
+*Defined in [entities/loadout.ts:28](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L28)*
 
 get an user's loadout
 
@@ -214,7 +214,7 @@ ___
 
 ▸ **remove**(userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/loadout.ts:83*
+*Defined in [entities/loadout.ts:81](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L81)*
 
 delete any loadouts by its owner user ID
 
@@ -234,7 +234,7 @@ ___
 
 ▸ **set**(updatedLoadout: *[ISetLoadoutBody](../interfaces/_entities_loadout_.isetloadoutbody.md)*, userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/loadout.ts:68*
+*Defined in [entities/loadout.ts:66](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/loadout.ts#L66)*
 
 set an user's loadout
 

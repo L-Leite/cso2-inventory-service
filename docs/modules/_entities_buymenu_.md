@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/buymenu"](../modules/_entities_buymenu_.md)
+[cso2-inventory-service](../README.md) > ["entities/buymenu"](../modules/_entities_buymenu_.md)
 
 # External module: "entities/buymenu"
 
@@ -26,7 +26,7 @@
 
 **● InventoryBuyMenuModel**: *`Model`<[InventoryBuyMenu](../classes/_entities_buymenu_.inventorybuymenu.md) & `Document`, `__type`> & [InventoryBuyMenu](../classes/_entities_buymenu_.inventorybuymenu.md) & [InventoryBuyMenu](../classes/_entities_buymenu_.inventorybuymenu.md)* =  new InventoryBuyMenu().getModelForClass(InventoryBuyMenu)
 
-*Defined in entities/buymenu.ts:106*
+*Defined in [entities/buymenu.ts:99](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L99)*
 
 ___
 

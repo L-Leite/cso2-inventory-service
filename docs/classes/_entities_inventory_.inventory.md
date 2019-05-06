@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/inventory"](../modules/_entities_inventory_.md) > [Inventory](../classes/_entities_inventory_.inventory.md)
+[cso2-inventory-service](../README.md) > ["entities/inventory"](../modules/_entities_inventory_.md) > [Inventory](../classes/_entities_inventory_.inventory.md)
 
 # Class: Inventory
 
@@ -39,7 +39,7 @@ represents an user's inventory
 
 **● items**: *[InventoryItem](_entities_item_.inventoryitem.md)[]*
 
-*Defined in entities/inventory.ts:132*
+*Defined in [entities/inventory.ts:126](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L126)*
 
 ___
 <a id="ownerid"></a>
@@ -48,7 +48,7 @@ ___
 
 **● ownerId**: *`number`*
 
-*Defined in entities/inventory.ts:130*
+*Defined in [entities/inventory.ts:124](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L124)*
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 ▸ **addItem**(itemId: *`number`*, itemAmmount: *`number`*, userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/inventory.ts:57*
+*Defined in [entities/inventory.ts:51](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L51)*
 
 add an item to an user's inventory
 
@@ -139,7 +139,7 @@ ___
 
 ▸ **create**(userId: *`number`*): `Promise`<[Inventory](_entities_inventory_.inventory.md)>
 
-*Defined in entities/inventory.ts:25*
+*Defined in [entities/inventory.ts:25](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L25)*
 
 create an user's inventory
 
@@ -159,7 +159,7 @@ ___
 
 ▸ **get**(userId: *`number`*): `Promise`<[Inventory](_entities_inventory_.inventory.md)>
 
-*Defined in entities/inventory.ts:15*
+*Defined in [entities/inventory.ts:15](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L15)*
 
 get an user's inventory items
 
@@ -179,7 +179,7 @@ ___
 
 ▸ **remove**(userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/inventory.ts:36*
+*Defined in [entities/inventory.ts:36](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L36)*
 
 delete an inventory by its owner user ID
 
@@ -199,7 +199,7 @@ ___
 
 ▸ **removeItem**(itemId: *`number`*, userId: *`number`*, itemAmmount?: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/inventory.ts:77*
+*Defined in [entities/inventory.ts:71](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L71)*
 
 remove an item from an user's inventory if itemAmmount IS provided, it will decrement the item's ammount by that value -- if the resulting ammount is zero or less than zero, the item will be deleted if itemAmmount is NOT provided, the item will be completely removed from the inventory
 
@@ -221,7 +221,7 @@ ___
 
 ▸ **removeItemInternal**(itemId: *`number`*, ownerId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/inventory.ts:107*
+*Defined in [entities/inventory.ts:101](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L101)*
 
 remove an item from an user's inventory
 
@@ -242,7 +242,7 @@ ___
 
 ▸ **updateItemQuantity**(itemId: *`number`*, newAmmount: *`number`*, ownerId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/inventory.ts:120*
+*Defined in [entities/inventory.ts:114](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/inventory.ts#L114)*
 
 update an item's quantity in an user's inventory
 

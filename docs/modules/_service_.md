@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["service"](../modules/_service_.md)
+[cso2-inventory-service](../README.md) > ["service"](../modules/_service_.md)
 
 # External module: "service"
 
@@ -18,7 +18,7 @@
 
 ▸ **startService**(): `Promise`<`void`>
 
-*Defined in service.ts:13*
+*Defined in [service.ts:13](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/service.ts#L13)*
 
 start a service instance
 

@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/defaultinventory"](../modules/_entities_defaultinventory_.md) > [DefaultInventory](../classes/_entities_defaultinventory_.defaultinventory.md)
+[cso2-inventory-service](../README.md) > ["entities/defaultinventory"](../modules/_entities_defaultinventory_.md) > [DefaultInventory](../classes/_entities_defaultinventory_.defaultinventory.md)
 
 # Class: DefaultInventory
 
@@ -55,7 +55,7 @@ holds items to give to new users
 
 **● backItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:63*
+*Defined in [entities/defaultinventory.ts:63](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L63)*
 
 ___
 <a id="carditem"></a>
@@ -64,7 +64,7 @@ ___
 
 **● cardItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:67*
+*Defined in [entities/defaultinventory.ts:67](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L67)*
 
 ___
 <a id="ctitem"></a>
@@ -73,7 +73,7 @@ ___
 
 **● ctItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:55*
+*Defined in [entities/defaultinventory.ts:55](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L55)*
 
 ___
 <a id="equipment"></a>
@@ -82,7 +82,7 @@ ___
 
 **● equipment**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:101*
+*Defined in [entities/defaultinventory.ts:101](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L101)*
 
 ___
 <a id="flash"></a>
@@ -91,7 +91,7 @@ ___
 
 **● flash**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:81*
+*Defined in [entities/defaultinventory.ts:81](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L81)*
 
 ___
 <a id="gloveitem"></a>
@@ -100,7 +100,7 @@ ___
 
 **● gloveItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:61*
+*Defined in [entities/defaultinventory.ts:61](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L61)*
 
 ___
 <a id="headitem"></a>
@@ -109,7 +109,7 @@ ___
 
 **● headItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:59*
+*Defined in [entities/defaultinventory.ts:59](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L59)*
 
 ___
 <a id="hegrenade"></a>
@@ -118,7 +118,7 @@ ___
 
 **● hegrenade**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:79*
+*Defined in [entities/defaultinventory.ts:79](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L79)*
 
 ___
 <a id="items"></a>
@@ -127,7 +127,7 @@ ___
 
 **● items**: *[InventoryItem](_entities_item_.inventoryitem.md)[]*
 
-*Defined in entities/defaultinventory.ts:51*
+*Defined in [entities/defaultinventory.ts:51](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L51)*
 
 ___
 <a id="machineguns"></a>
@@ -136,7 +136,7 @@ ___
 
 **● machineguns**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:97*
+*Defined in [entities/defaultinventory.ts:97](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L97)*
 
 ___
 <a id="melee"></a>
@@ -145,7 +145,7 @@ ___
 
 **● melee**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:77*
+*Defined in [entities/defaultinventory.ts:77](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L77)*
 
 ___
 <a id="melees"></a>
@@ -154,7 +154,7 @@ ___
 
 **● melees**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:99*
+*Defined in [entities/defaultinventory.ts:99](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L99)*
 
 ___
 <a id="pistols"></a>
@@ -163,7 +163,7 @@ ___
 
 **● pistols**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:87*
+*Defined in [entities/defaultinventory.ts:87](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L87)*
 
 ___
 <a id="primary"></a>
@@ -172,7 +172,7 @@ ___
 
 **● primary**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:73*
+*Defined in [entities/defaultinventory.ts:73](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L73)*
 
 ___
 <a id="rifles"></a>
@@ -181,7 +181,7 @@ ___
 
 **● rifles**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:93*
+*Defined in [entities/defaultinventory.ts:93](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L93)*
 
 ___
 <a id="secondary"></a>
@@ -190,7 +190,7 @@ ___
 
 **● secondary**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:75*
+*Defined in [entities/defaultinventory.ts:75](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L75)*
 
 ___
 <a id="shotguns"></a>
@@ -199,7 +199,7 @@ ___
 
 **● shotguns**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:89*
+*Defined in [entities/defaultinventory.ts:89](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L89)*
 
 ___
 <a id="smgs"></a>
@@ -208,7 +208,7 @@ ___
 
 **● smgs**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:91*
+*Defined in [entities/defaultinventory.ts:91](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L91)*
 
 ___
 <a id="smoke"></a>
@@ -217,7 +217,7 @@ ___
 
 **● smoke**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:83*
+*Defined in [entities/defaultinventory.ts:83](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L83)*
 
 ___
 <a id="snipers"></a>
@@ -226,7 +226,7 @@ ___
 
 **● snipers**: *`number`[]*
 
-*Defined in entities/defaultinventory.ts:95*
+*Defined in [entities/defaultinventory.ts:95](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L95)*
 
 ___
 <a id="sprayitem"></a>
@@ -235,7 +235,7 @@ ___
 
 **● sprayItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:69*
+*Defined in [entities/defaultinventory.ts:69](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L69)*
 
 ___
 <a id="stepsitem"></a>
@@ -244,7 +244,7 @@ ___
 
 **● stepsItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:65*
+*Defined in [entities/defaultinventory.ts:65](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L65)*
 
 ___
 <a id="teritem"></a>
@@ -253,7 +253,7 @@ ___
 
 **● terItem**: *`number`*
 
-*Defined in entities/defaultinventory.ts:57*
+*Defined in [entities/defaultinventory.ts:57](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L57)*
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 ▸ **create**(): `Promise`<[DefaultInventory](_entities_defaultinventory_.defaultinventory.md)>
 
-*Defined in entities/defaultinventory.ts:20*
+*Defined in [entities/defaultinventory.ts:20](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L20)*
 
 **Returns:** `Promise`<[DefaultInventory](_entities_defaultinventory_.defaultinventory.md)>
 
@@ -332,7 +332,7 @@ ___
 
 ▸ **get**(): `Promise`<[DefaultInventory](_entities_defaultinventory_.defaultinventory.md)>
 
-*Defined in entities/defaultinventory.ts:15*
+*Defined in [entities/defaultinventory.ts:15](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/defaultinventory.ts#L15)*
 
 get an user's inventory items
 

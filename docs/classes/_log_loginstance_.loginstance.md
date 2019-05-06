@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["log/loginstance"](../modules/_log_loginstance_.md) > [LogInstance](../classes/_log_loginstance_.loginstance.md)
+[cso2-inventory-service](../README.md) > ["log/loginstance"](../modules/_log_loginstance_.md) > [LogInstance](../classes/_log_loginstance_.loginstance.md)
 
 # Class: LogInstance
 
@@ -32,7 +32,7 @@ sets up and stores the winston logger
 
 **● logger**: *`Logger`*
 
-*Defined in log/loginstance.ts:59*
+*Defined in [log/loginstance.ts:59](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/loginstance.ts#L59)*
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 ▸ **debug**(message: *`string`*): `void`
 
-*Defined in log/loginstance.ts:11*
+*Defined in [log/loginstance.ts:11](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/loginstance.ts#L11)*
 
 log a debug type message
 
@@ -63,7 +63,7 @@ ___
 
 ▸ **error**(message: *`string`*): `void`
 
-*Defined in log/loginstance.ts:19*
+*Defined in [log/loginstance.ts:19](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/loginstance.ts#L19)*
 
 log a error type message
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **info**(message: *`string`*): `void`
 
-*Defined in log/loginstance.ts:27*
+*Defined in [log/loginstance.ts:27](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/loginstance.ts#L27)*
 
 log a information type message
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **init**(): `void`
 
-*Defined in log/loginstance.ts:42*
+*Defined in [log/loginstance.ts:42](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/loginstance.ts#L42)*
 
 setup winston logger
 
@@ -114,7 +114,7 @@ ___
 
 ▸ **warn**(message: *`string`*): `void`
 
-*Defined in log/loginstance.ts:35*
+*Defined in [log/loginstance.ts:35](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/loginstance.ts#L35)*
 
 log a warning type message
 

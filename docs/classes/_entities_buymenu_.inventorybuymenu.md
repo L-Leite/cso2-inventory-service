@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/buymenu"](../modules/_entities_buymenu_.md) > [InventoryBuyMenu](../classes/_entities_buymenu_.inventorybuymenu.md)
+[cso2-inventory-service](../README.md) > ["entities/buymenu"](../modules/_entities_buymenu_.md) > [InventoryBuyMenu](../classes/_entities_buymenu_.inventorybuymenu.md)
 
 # Class: InventoryBuyMenu
 
@@ -43,7 +43,7 @@ an user's ingame buy menu
 
 **● equipment**: *`number`[]*
 
-*Defined in entities/buymenu.ts:103*
+*Defined in [entities/buymenu.ts:96](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L96)*
 
 ___
 <a id="machineguns"></a>
@@ -52,7 +52,7 @@ ___
 
 **● machineguns**: *`number`[]*
 
-*Defined in entities/buymenu.ts:99*
+*Defined in [entities/buymenu.ts:92](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L92)*
 
 ___
 <a id="melees"></a>
@@ -61,7 +61,7 @@ ___
 
 **● melees**: *`number`[]*
 
-*Defined in entities/buymenu.ts:101*
+*Defined in [entities/buymenu.ts:94](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L94)*
 
 ___
 <a id="ownerid"></a>
@@ -70,7 +70,7 @@ ___
 
 **● ownerId**: *`number`*
 
-*Defined in entities/buymenu.ts:87*
+*Defined in [entities/buymenu.ts:80](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L80)*
 
 ___
 <a id="pistols"></a>
@@ -79,7 +79,7 @@ ___
 
 **● pistols**: *`number`[]*
 
-*Defined in entities/buymenu.ts:89*
+*Defined in [entities/buymenu.ts:82](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L82)*
 
 ___
 <a id="rifles"></a>
@@ -88,7 +88,7 @@ ___
 
 **● rifles**: *`number`[]*
 
-*Defined in entities/buymenu.ts:95*
+*Defined in [entities/buymenu.ts:88](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L88)*
 
 ___
 <a id="shotguns"></a>
@@ -97,7 +97,7 @@ ___
 
 **● shotguns**: *`number`[]*
 
-*Defined in entities/buymenu.ts:91*
+*Defined in [entities/buymenu.ts:84](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L84)*
 
 ___
 <a id="smgs"></a>
@@ -106,7 +106,7 @@ ___
 
 **● smgs**: *`number`[]*
 
-*Defined in entities/buymenu.ts:93*
+*Defined in [entities/buymenu.ts:86](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L86)*
 
 ___
 <a id="snipers"></a>
@@ -115,7 +115,7 @@ ___
 
 **● snipers**: *`number`[]*
 
-*Defined in entities/buymenu.ts:97*
+*Defined in [entities/buymenu.ts:90](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L90)*
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **create**(userId: *`number`*): `Promise`<[InventoryBuyMenu](_entities_buymenu_.inventorybuymenu.md)>
 
-*Defined in entities/buymenu.ts:35*
+*Defined in [entities/buymenu.ts:35](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L35)*
 
 create a buy menu for an user
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **get**(loadoutNum: *`number`*, userId: *`number`*): `Promise`<[InventoryBuyMenu](_entities_buymenu_.inventorybuymenu.md)>
 
-*Defined in entities/buymenu.ts:25*
+*Defined in [entities/buymenu.ts:25](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L25)*
 
 get an user's buy menu
 
@@ -224,7 +224,7 @@ ___
 
 ▸ **remove**(userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/buymenu.ts:73*
+*Defined in [entities/buymenu.ts:73](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L73)*
 
 delete a buy menu by its owner user ID
 
@@ -244,7 +244,7 @@ ___
 
 ▸ **set**(updatedBuyMenu: *[ISetBuyMenuBody](../interfaces/_entities_buymenu_.isetbuymenubody.md)*, userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/buymenu.ts:58*
+*Defined in [entities/buymenu.ts:58](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/buymenu.ts#L58)*
 
 set an user's buy menu
 

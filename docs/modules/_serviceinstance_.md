@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["serviceinstance"](../modules/_serviceinstance_.md)
+[cso2-inventory-service](../README.md) > ["serviceinstance"](../modules/_serviceinstance_.md)
 
 # External module: "serviceinstance"
 

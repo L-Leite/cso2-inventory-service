@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["routes/inventory"](../modules/_routes_inventory_.md)
+[cso2-inventory-service](../README.md) > ["routes/inventory"](../modules/_routes_inventory_.md)
 
 # External module: "routes/inventory"
 

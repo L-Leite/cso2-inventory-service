@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/cosmetics"](../modules/_entities_cosmetics_.md)
+[cso2-inventory-service](../README.md) > ["entities/cosmetics"](../modules/_entities_cosmetics_.md)
 
 # External module: "entities/cosmetics"
 
@@ -26,7 +26,7 @@
 
 **● InventoryCosmeticsModel**: *`Model`<[InventoryCosmetics](../classes/_entities_cosmetics_.inventorycosmetics.md) & `Document`, `__type`> & [InventoryCosmetics](../classes/_entities_cosmetics_.inventorycosmetics.md) & [InventoryCosmetics](../classes/_entities_cosmetics_.inventorycosmetics.md)* =  new InventoryCosmetics().getModelForClass(InventoryCosmetics)
 
-*Defined in entities/cosmetics.ts:105*
+*Defined in [entities/cosmetics.ts:98](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L98)*
 
 ___
 

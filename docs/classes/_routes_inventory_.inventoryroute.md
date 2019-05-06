@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["routes/inventory"](../modules/_routes_inventory_.md) > [InventoryRoute](../classes/_routes_inventory_.inventoryroute.md)
+[cso2-inventory-service](../README.md) > ["routes/inventory"](../modules/_routes_inventory_.md) > [InventoryRoute](../classes/_routes_inventory_.inventoryroute.md)
 
 # Class: InventoryRoute
 
@@ -25,6 +25,7 @@ handles requests to /inventory/:userId
 * [onGetInventoryBuyMenu](_routes_inventory_.inventoryroute.md#ongetinventorybuymenu)
 * [onGetInventoryCosmetics](_routes_inventory_.inventoryroute.md#ongetinventorycosmetics)
 * [onGetInventoryLoadout](_routes_inventory_.inventoryroute.md#ongetinventoryloadout)
+* [onGetPing](_routes_inventory_.inventoryroute.md#ongetping)
 * [onPostInventory](_routes_inventory_.inventoryroute.md#onpostinventory)
 * [onPostInventoryBuyMenu](_routes_inventory_.inventoryroute.md#onpostinventorybuymenu)
 * [onPostInventoryCosmetics](_routes_inventory_.inventoryroute.md#onpostinventorycosmetics)
@@ -44,7 +45,7 @@ handles requests to /inventory/:userId
 
 ⊕ **new InventoryRoute**(app: *`express.Express`*): [InventoryRoute](_routes_inventory_.inventoryroute.md)
 
-*Defined in routes/inventory.ts:14*
+*Defined in [routes/inventory.ts:14](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L14)*
 
 **Parameters:**
 
@@ -64,7 +65,7 @@ ___
 
 ▸ **onDeleteInventory**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:121*
+*Defined in [routes/inventory.ts:123](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L123)*
 
 called when a DELETE request to /inventory/:userId is done deletes an user's invetory, cosmetics, loadouts and buy menu returns 200 if deleted successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -84,7 +85,7 @@ ___
 
 ▸ **onDeleteInventoryBuyMenu**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:605*
+*Defined in [routes/inventory.ts:607](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L607)*
 
 called when a DELETE request to /inventory/:userId/buymenu is done deletes an user's buy menu returns 200 if deleted successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -104,7 +105,7 @@ ___
 
 ▸ **onDeleteInventoryCosmetics**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:331*
+*Defined in [routes/inventory.ts:333](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L333)*
 
 called when a DELETE request to /inventory/:userId/cosmetics is done deletes an user's cosmetics slots returns 200 if deleted successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -124,7 +125,7 @@ ___
 
 ▸ **onDeleteInventoryItem**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:192*
+*Defined in [routes/inventory.ts:194](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L194)*
 
 called when a DELETE request to /inventory/:userId/item is done deletes an item from an user's invetory returns 200 if deleted successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -144,7 +145,7 @@ ___
 
 ▸ **onDeleteInventoryLoadout**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:468*
+*Defined in [routes/inventory.ts:470](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L470)*
 
 called when a DELETE request to /inventory/:userId/loadout is done deletes an user's loadouts returns 200 if deleted successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -164,7 +165,7 @@ ___
 
 ▸ **onGetInventory**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:51*
+*Defined in [routes/inventory.ts:53](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L53)*
 
 called when a GET request to /inventory/:userId is done returns an user's inventory items returns 200 if successful returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -184,7 +185,7 @@ ___
 
 ▸ **onGetInventoryBuyMenu**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:501*
+*Defined in [routes/inventory.ts:503](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L503)*
 
 called when a GET request to /inventory/:userId/buymenu is done gets an user's buy menu returns 200 if successful returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -204,7 +205,7 @@ ___
 
 ▸ **onGetInventoryCosmetics**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:228*
+*Defined in [routes/inventory.ts:230](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L230)*
 
 called when a GET request to /inventory/:userId/cosmetics is done gets the currently equipped user's cosmetics returns 200 if successful returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -224,9 +225,29 @@ ___
 
 ▸ **onGetInventoryLoadout**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:364*
+*Defined in [routes/inventory.ts:366](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L366)*
 
 called when a GET request to /inventory/:userId/loadout is done gets an user's loadout returns 200 if successful returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| req | `express.Request` |  the request data |
+| res | `express.Response` |  the response data |
+
+**Returns:** `Promise`<`void`>
+
+___
+<a id="ongetping"></a>
+
+### `<Private>` onGetPing
+
+▸ **onGetPing**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
+
+*Defined in [routes/inventory.ts:636](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L636)*
+
+called when a GET request to /ping is done tells the requester that we are alive returns 200
 
 **Parameters:**
 
@@ -244,9 +265,9 @@ ___
 
 ▸ **onPostInventory**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:85*
+*Defined in [routes/inventory.ts:87](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L87)*
 
-called when a POST request to /inventory/:userId is done create an inventory for an user returns 200 if created successfully returns 400 if the request is malformed returns 409 if the user already has an inventory returns 500 if an internal unknown error occured
+called when a POST request to /inventory/:userId is done create an inventory for an user returns 201 if created successfully returns 400 if the request is malformed returns 409 if the user already has an inventory returns 500 if an internal unknown error occured
 
 **Parameters:**
 
@@ -264,9 +285,9 @@ ___
 
 ▸ **onPostInventoryBuyMenu**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:535*
+*Defined in [routes/inventory.ts:537](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L537)*
 
-called when a POST request to /inventory/:userId/buymenu is done creates a buy menu for an user returns 200 if created successfully returns 400 if the request is malformed returns 409 if the user already has a buy menu returns 500 if an internal unknown error occured
+called when a POST request to /inventory/:userId/buymenu is done creates a buy menu for an user returns 201 if created successfully returns 400 if the request is malformed returns 409 if the user already has a buy menu returns 500 if an internal unknown error occured
 
 **Parameters:**
 
@@ -284,9 +305,9 @@ ___
 
 ▸ **onPostInventoryCosmetics**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:261*
+*Defined in [routes/inventory.ts:263](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L263)*
 
-called when a POST request to /inventory/:userId/cosmetics is done create cosmetic slots for an user returns 200 if created successfully returns 400 if the request is malformed returns 409 if the user already has cosmetic slots returns 500 if an internal unknown error occured
+called when a POST request to /inventory/:userId/cosmetics is done create cosmetic slots for an user returns 201 if created successfully returns 400 if the request is malformed returns 409 if the user already has cosmetic slots returns 500 if an internal unknown error occured
 
 **Parameters:**
 
@@ -304,9 +325,9 @@ ___
 
 ▸ **onPostInventoryLoadout**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:398*
+*Defined in [routes/inventory.ts:400](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L400)*
 
-called when a POST request to /inventory/:userId/loadout is done create loadouts for an user returns 200 if created successfully returns 400 if the request is malformed returns 409 if the user already has loadouts returns 500 if an internal unknown error occured
+called when a POST request to /inventory/:userId/loadout is done create loadouts for an user returns 201 if created successfully returns 400 if the request is malformed returns 409 if the user already has loadouts returns 500 if an internal unknown error occured
 
 **Parameters:**
 
@@ -324,7 +345,7 @@ ___
 
 ▸ **onPutInventoryBuyMenu**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:571*
+*Defined in [routes/inventory.ts:573](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L573)*
 
 called when a PUT request to /inventory/:userId/buymenu is done sets an user's sub buy menu returns 200 if set successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -344,7 +365,7 @@ ___
 
 ▸ **onPutInventoryCosmetics**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:297*
+*Defined in [routes/inventory.ts:299](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L299)*
 
 called when a PUT request to /inventory/:userId/cosmetics is done sets an user's equipped cosmetics returns 200 if set successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -364,7 +385,7 @@ ___
 
 ▸ **onPutInventoryItem**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:154*
+*Defined in [routes/inventory.ts:156](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L156)*
 
 called when a PUT request to /inventory/:userId/item is done adds an item to an user's inventory returns 200 if added successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 
@@ -384,7 +405,7 @@ ___
 
 ▸ **onPutInventoryLoadout**(req: *`express.Request`*, res: *`express.Response`*): `Promise`<`void`>
 
-*Defined in routes/inventory.ts:434*
+*Defined in [routes/inventory.ts:436](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/routes/inventory.ts#L436)*
 
 called when a PUT request to /inventory/:userId/cosmetics is done sets an user's equipped cosmetics returns 200 if set successfully returns 400 if the request is malformed returns 404 if the user doesn't exist returns 500 if an internal unknown error occured
 

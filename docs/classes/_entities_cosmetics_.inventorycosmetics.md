@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/cosmetics"](../modules/_entities_cosmetics_.md) > [InventoryCosmetics](../classes/_entities_cosmetics_.inventorycosmetics.md)
+[cso2-inventory-service](../README.md) > ["entities/cosmetics"](../modules/_entities_cosmetics_.md) > [InventoryCosmetics](../classes/_entities_cosmetics_.inventorycosmetics.md)
 
 # Class: InventoryCosmetics
 
@@ -43,7 +43,7 @@ stores an user's equipped cosmetic items
 
 **● backItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:96*
+*Defined in [entities/cosmetics.ts:89](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L89)*
 
 ___
 <a id="carditem"></a>
@@ -52,7 +52,7 @@ ___
 
 **● cardItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:100*
+*Defined in [entities/cosmetics.ts:93](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L93)*
 
 ___
 <a id="ctitem"></a>
@@ -61,7 +61,7 @@ ___
 
 **● ctItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:88*
+*Defined in [entities/cosmetics.ts:81](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L81)*
 
 ___
 <a id="gloveitem"></a>
@@ -70,7 +70,7 @@ ___
 
 **● gloveItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:94*
+*Defined in [entities/cosmetics.ts:87](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L87)*
 
 ___
 <a id="headitem"></a>
@@ -79,7 +79,7 @@ ___
 
 **● headItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:92*
+*Defined in [entities/cosmetics.ts:85](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L85)*
 
 ___
 <a id="ownerid"></a>
@@ -88,7 +88,7 @@ ___
 
 **● ownerId**: *`number`*
 
-*Defined in entities/cosmetics.ts:86*
+*Defined in [entities/cosmetics.ts:79](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L79)*
 
 ___
 <a id="sprayitem"></a>
@@ -97,7 +97,7 @@ ___
 
 **● sprayItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:102*
+*Defined in [entities/cosmetics.ts:95](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L95)*
 
 ___
 <a id="stepsitem"></a>
@@ -106,7 +106,7 @@ ___
 
 **● stepsItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:98*
+*Defined in [entities/cosmetics.ts:91](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L91)*
 
 ___
 <a id="teritem"></a>
@@ -115,7 +115,7 @@ ___
 
 **● terItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:90*
+*Defined in [entities/cosmetics.ts:83](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L83)*
 
 ___
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **create**(userId: *`number`*): `Promise`<[InventoryCosmetics](_entities_cosmetics_.inventorycosmetics.md)>
 
-*Defined in entities/cosmetics.ts:35*
+*Defined in [entities/cosmetics.ts:35](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L35)*
 
 create an user's inventory
 
@@ -203,7 +203,7 @@ ___
 
 ▸ **get**(userId: *`number`*): `Promise`<[InventoryCosmetics](_entities_cosmetics_.inventorycosmetics.md)>
 
-*Defined in entities/cosmetics.ts:25*
+*Defined in [entities/cosmetics.ts:25](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L25)*
 
 get an user's equipped cosmetics
 
@@ -223,7 +223,7 @@ ___
 
 ▸ **remove**(userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/cosmetics.ts:72*
+*Defined in [entities/cosmetics.ts:72](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L72)*
 
 delete a buy menu by its owner user ID
 
@@ -243,7 +243,7 @@ ___
 
 ▸ **set**(updatedCosmetics: *[ISetCosmeticsBody](../interfaces/_entities_cosmetics_.isetcosmeticsbody.md)*, userId: *`number`*): `Promise`<`boolean`>
 
-*Defined in entities/cosmetics.ts:58*
+*Defined in [entities/cosmetics.ts:58](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L58)*
 
 set an user's equipped cosmetics
 

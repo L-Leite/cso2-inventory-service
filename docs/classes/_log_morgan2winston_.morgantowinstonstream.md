@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["log/morgan2winston"](../modules/_log_morgan2winston_.md) > [MorganToWinstonStream](../classes/_log_morgan2winston_.morgantowinstonstream.md)
+[cso2-inventory-service](../README.md) > ["log/morgan2winston"](../modules/_log_morgan2winston_.md) > [MorganToWinstonStream](../classes/_log_morgan2winston_.morgantowinstonstream.md)
 
 # Class: MorganToWinstonStream
 
@@ -26,7 +26,7 @@ writes logged data from morgan to a winston logger instance
 
 ▸ **write**(str: *`string`*): `void`
 
-*Defined in log/morgan2winston.ts:11*
+*Defined in [log/morgan2winston.ts:11](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/log/morgan2winston.ts#L11)*
 
 Output stream for writing log lines.
 

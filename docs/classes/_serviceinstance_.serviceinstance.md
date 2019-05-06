@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["serviceinstance"](../modules/_serviceinstance_.md) > [ServiceInstance](../classes/_serviceinstance_.serviceinstance.md)
+[cso2-inventory-service](../README.md) > ["serviceinstance"](../modules/_serviceinstance_.md) > [ServiceInstance](../classes/_serviceinstance_.serviceinstance.md)
 
 # Class: ServiceInstance
 
@@ -39,7 +39,7 @@ the service's entrypoint
 
 ⊕ **new ServiceInstance**(): [ServiceInstance](_serviceinstance_.serviceinstance.md)
 
-*Defined in serviceinstance.ts:42*
+*Defined in [serviceinstance.ts:42](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L42)*
 
 **Returns:** [ServiceInstance](_serviceinstance_.serviceinstance.md)
 
@@ -53,7 +53,7 @@ ___
 
 **● app**: *`express.Express`*
 
-*Defined in serviceinstance.ts:41*
+*Defined in [serviceinstance.ts:41](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L41)*
 
 ___
 <a id="server"></a>
@@ -62,7 +62,7 @@ ___
 
 **● server**: *`Server`*
 
-*Defined in serviceinstance.ts:42*
+*Defined in [serviceinstance.ts:42](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L42)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 ▸ **applyConfigs**(): `void`
 
-*Defined in serviceinstance.ts:104*
+*Defined in [serviceinstance.ts:104](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L104)*
 
 apply configurations to the service
 
@@ -87,9 +87,9 @@ ___
 
 ▸ **isDevEnv**(): `boolean`
 
-*Defined in serviceinstance.ts:132*
+*Defined in [serviceinstance.ts:132](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L132)*
 
-are we in a development environment?
+are we in a development environment
 
 **Returns:** `boolean`
 true if so, false if not
@@ -101,7 +101,7 @@ ___
 
 ▸ **listen**(): `void`
 
-*Defined in serviceinstance.ts:60*
+*Defined in [serviceinstance.ts:60](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L60)*
 
 start the service
 
@@ -114,7 +114,7 @@ ___
 
 ▸ **setupDb**(): `void`
 
-*Defined in serviceinstance.ts:77*
+*Defined in [serviceinstance.ts:77](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L77)*
 
 setup the database connection
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **setupRoutes**(): `void`
 
-*Defined in serviceinstance.ts:124*
+*Defined in [serviceinstance.ts:124](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L124)*
 
 setup the service's API routes
 
@@ -140,7 +140,7 @@ ___
 
 ▸ **stop**(): `void`
 
-*Defined in serviceinstance.ts:69*
+*Defined in [serviceinstance.ts:69](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L69)*
 
 stop the service instance
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **checkEnvVars**(): `void`
 
-*Defined in serviceinstance.ts:23*
+*Defined in [serviceinstance.ts:23](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/serviceinstance.ts#L23)*
 
 check if the required environment variables are set on start throws an error if one is missing
 

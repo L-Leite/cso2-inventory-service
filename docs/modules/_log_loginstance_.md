@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["log/loginstance"](../modules/_log_loginstance_.md)
+[cso2-inventory-service](../README.md) > ["log/loginstance"](../modules/_log_loginstance_.md)
 
 # External module: "log/loginstance"
 

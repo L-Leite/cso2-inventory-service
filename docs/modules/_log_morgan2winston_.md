@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["log/morgan2winston"](../modules/_log_morgan2winston_.md)
+[cso2-inventory-service](../README.md) > ["log/morgan2winston"](../modules/_log_morgan2winston_.md)
 
 # External module: "log/morgan2winston"
 

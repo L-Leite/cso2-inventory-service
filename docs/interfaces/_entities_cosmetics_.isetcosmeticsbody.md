@@ -1,4 +1,4 @@
-[cso2-users-service](../README.md) > ["entities/cosmetics"](../modules/_entities_cosmetics_.md) > [ISetCosmeticsBody](../interfaces/_entities_cosmetics_.isetcosmeticsbody.md)
+[cso2-inventory-service](../README.md) > ["entities/cosmetics"](../modules/_entities_cosmetics_.md) > [ISetCosmeticsBody](../interfaces/_entities_cosmetics_.isetcosmeticsbody.md)
 
 # Interface: ISetCosmeticsBody
 
@@ -29,7 +29,7 @@
 
 **● backItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:10*
+*Defined in [entities/cosmetics.ts:10](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L10)*
 
 ___
 <a id="carditem"></a>
@@ -38,7 +38,7 @@ ___
 
 **● cardItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:12*
+*Defined in [entities/cosmetics.ts:12](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L12)*
 
 ___
 <a id="ctitem"></a>
@@ -47,7 +47,7 @@ ___
 
 **● ctItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:6*
+*Defined in [entities/cosmetics.ts:6](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L6)*
 
 ___
 <a id="gloveitem"></a>
@@ -56,7 +56,7 @@ ___
 
 **● gloveItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:9*
+*Defined in [entities/cosmetics.ts:9](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L9)*
 
 ___
 <a id="headitem"></a>
@@ -65,7 +65,7 @@ ___
 
 **● headItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:8*
+*Defined in [entities/cosmetics.ts:8](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L8)*
 
 ___
 <a id="sprayitem"></a>
@@ -74,7 +74,7 @@ ___
 
 **● sprayItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:13*
+*Defined in [entities/cosmetics.ts:13](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L13)*
 
 ___
 <a id="stepsitem"></a>
@@ -83,7 +83,7 @@ ___
 
 **● stepsItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:11*
+*Defined in [entities/cosmetics.ts:11](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L11)*
 
 ___
 <a id="teritem"></a>
@@ -92,7 +92,7 @@ ___
 
 **● terItem**: *`number`*
 
-*Defined in entities/cosmetics.ts:7*
+*Defined in [entities/cosmetics.ts:7](https://github.com/Ochii/cso2-inventory-service/blob/a4be48c/src/entities/cosmetics.ts#L7)*
 
 ___
 
