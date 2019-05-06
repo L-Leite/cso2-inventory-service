@@ -34,16 +34,10 @@ export class Inventory extends typegoose.Typegoose {
      * @returns a promise returning true if deleted successfully, or false if not
      */
     public static async remove(userId: number): Promise<boolean> {
-        return new Promise<boolean>((resolve: (val: boolean) => void,
-                                     reject: (reason?: any) => void) => {
-            InventoryModel.deleteOne({ ownerId: userId })
-                .exec()
-                .then((val: { ok: number; n: number; }) => {
-                    // return true if deleted only one document (val.n) with success (val.ok)
-                    return resolve(val.ok === 1 && val.n === 1)
-                })
-                .catch(reject)
-        })
+        const res = await InventoryModel.deleteOne({ ownerId: userId })
+            .exec()
+        // return true if deleted only one document (val.n) with success (val.ok)
+        return res.ok === 1 && res.n === 1
     }
 
     /**
@@ -61,7 +55,7 @@ export class Inventory extends typegoose.Typegoose {
             await InventoryModel.updateOne(
                 { ownerId: userId }, { $push: { items: newItem } })
                 .exec()
-        return res.n === 1 && res.nModified === 1
+        return res.ok === 1 && res.n === 1
     }
 
     /**
@@ -107,7 +101,7 @@ export class Inventory extends typegoose.Typegoose {
     private static async removeItemInternal(itemId: number, ownerId: number): Promise<boolean> {
         const res = await InventoryModel.updateOne({ ownerId }, { $pull: { items: itemId } })
             .exec()
-        return res.n === 1 && res.ok === 1
+        return res.ok === 1 && res.n === 1
     }
 
     /**
@@ -123,7 +117,7 @@ export class Inventory extends typegoose.Typegoose {
             { ownerId, 'items.itemId': itemId },
             { $set: { 'items.$.ammount': newAmmount } })
             .exec()
-        return res.n === 1 && res.nModified === 1
+        return res.ok === 1 && res.n === 1
     }
 
     @typegoose.prop({ index: true, required: true, unique: true })

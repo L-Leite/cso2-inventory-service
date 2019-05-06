@@ -144,7 +144,7 @@ types:
   post:
     description: Create an inventory for an user. 
     responses:
-      200:
+      201:
         description: The inventory was created successfully
         body:
           application/json:
@@ -239,7 +239,7 @@ types:
     post:
       description: Create cosmetic slots for an user. 
       responses:
-        200:
+        201:
           description: The cosmetic slots were created successfully
           body:
             application/json:
@@ -331,7 +331,7 @@ types:
     post:
       description: Create loadouts for an user. 
       responses:
-        200:
+        201:
           description: The loadouts were created successfully
           body:
             application/json:
@@ -501,7 +501,7 @@ types:
     post:
       description: Create a buy menu for an user.
       responses:
-        200:
+        201:
           description: The loadouts were created successfully
           body:
             application/json:
@@ -630,3 +630,9 @@ types:
           description: The user does not exist.
         500:
           description: An unknown internal error occured.
+/ping:
+  get:
+    description: Checks if a service is running.
+    responses:
+      200:
+        description: The service is up and running.

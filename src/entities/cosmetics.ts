@@ -61,7 +61,7 @@ export class InventoryCosmetics extends typegoose.Typegoose {
             await InventoryCosmeticsModel.updateOne(
                 { ownerId: userId }, { $set: updatedCosmetics })
                 .exec()
-        return res.n === 1 && res.nModified === 1
+        return res.ok === 1 && res.n === 1
     }
 
     /**
@@ -70,16 +70,9 @@ export class InventoryCosmetics extends typegoose.Typegoose {
      * @returns a promise returning true if deleted successfully, or false if not
      */
     public static async remove(userId: number): Promise<boolean> {
-        return new Promise<boolean>((resolve: (val: boolean) => void,
-                                     reject: (reason?: any) => void) => {
-            InventoryCosmeticsModel.deleteOne({ ownerId: userId })
+        const res = await InventoryCosmeticsModel.deleteOne({ ownerId: userId })
                 .exec()
-                .then((val: { ok: number; n: number; }) => {
-                    // return true if deleted only one document (val.n) with success (val.ok)
-                    return resolve(val.ok === 1 && val.n === 1)
-                })
-                .catch(reject)
-        })
+        return res.ok === 1 && res.n === 1
     }
 
     @typegoose.prop({ index: true, required: true, unique: true })

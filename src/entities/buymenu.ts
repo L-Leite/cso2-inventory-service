@@ -62,7 +62,7 @@ export class InventoryBuyMenu extends typegoose.Typegoose {
                 { ownerId: userId },
                 { $set: updatedBuyMenu })
                 .exec()
-        return res.n === 1 && res.nModified === 1
+        return res.ok === 1 && res.n === 1
     }
 
     /**
@@ -71,16 +71,9 @@ export class InventoryBuyMenu extends typegoose.Typegoose {
      * @returns a promise returning true if deleted successfully, or false if not
      */
     public static async remove(userId: number): Promise<boolean> {
-        return new Promise<boolean>((resolve: (val: boolean) => void,
-                                     reject: (reason?: any) => void) => {
-            InventoryBuyMenuModel.deleteOne({ ownerId: userId })
-                .exec()
-                .then((val: { ok: number; n: number; }) => {
-                    // return true if deleted only one document (val.n) with success (val.ok)
-                    return resolve(val.ok === 1 && val.n === 1)
-                })
-                .catch(reject)
-        })
+        const res = await InventoryBuyMenuModel.deleteOne({ ownerId: userId })
+            .exec()
+        return res.ok === 1 && res.n === 1
     }
 
     @typegoose.prop({ index: true, required: true, unique: true })

@@ -6,14 +6,12 @@ const MAX_LOADOUTS = 3
 
 export interface ISetLoadoutBody {
     loadoutNum: number
-    ctItem?: number
-    terItem?: number
-    headItem?: number
-    gloveItem?: number
-    backItem?: number
-    stepsItem?: number
-    cardItem?: number
-    sprayItem?: number
+    primary?: number
+    secondary?: number
+    melee?: number
+    hegrenade?: number
+    flash?: number
+    smoke?: number
 }
 
 /**
@@ -72,7 +70,7 @@ export class InventoryLoadout extends typegoose.Typegoose {
                 { ownerId: userId, loadoutNum: updatedLoadout.loadoutNum },
                 { $set: updatedLoadout })
                 .exec()
-        return res.n === 1 && res.nModified === 1
+        return res.ok === 1 && res.n === 1
     }
 
     /**
@@ -81,16 +79,9 @@ export class InventoryLoadout extends typegoose.Typegoose {
      * @returns a promise returning true if deleted successfully, or false if not
      */
     public static async remove(userId: number): Promise<boolean> {
-        return new Promise<boolean>((resolve: (val: boolean) => void,
-                                     reject: (reason?: any) => void) => {
-            InventoryLoadoutModel.deleteMany({ ownerId: userId })
-                .exec()
-                .then((val: { ok: number; n: number; }) => {
-                    // return true if deleted only one document (val.n) with success (val.ok)
-                    return resolve(val.ok === 1 && val.n === 3)
-                })
-                .catch(reject)
-        })
+        const res = await InventoryLoadoutModel.deleteMany({ ownerId: userId })
+            .exec()
+        return res.ok === 1 && res.n === 1
     }
 
     @typegoose.prop({ required: true })

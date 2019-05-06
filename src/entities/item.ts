@@ -15,7 +15,7 @@ export class InventoryItem {
      * @param itemId the item's id
      * @param ammount  the ammount of items
      */
-    constructor(itemId: number, ammount: number = 0) {
+    constructor(itemId: number, ammount: number = 1) {
         this.itemId = itemId
         this.ammount = ammount
     }

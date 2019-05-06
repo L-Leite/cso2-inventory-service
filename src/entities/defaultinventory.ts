@@ -1,7 +1,7 @@
 import * as typegoose from 'typegoose'
 
+import { DefaultInventoryItems } from 'entities/defaultitems'
 import { InventoryItem } from 'entities/item'
-import { DefaultInventoryItems } from './defaultitems';
 
 /**
  * holds items to give to new users

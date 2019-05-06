@@ -1,4 +1,5 @@
 import express from 'express'
+import { MongoError } from 'mongodb'
 
 import { LogInstance } from 'log/loginstance'
 
@@ -6,7 +7,6 @@ import { InventoryBuyMenu } from 'entities/buymenu'
 import { InventoryCosmetics, ISetCosmeticsBody } from 'entities/cosmetics'
 import { Inventory } from 'entities/inventory'
 import { InventoryLoadout } from 'entities/loadout'
-import { MongoError } from 'mongodb';
 
 /**
  * handles requests to /inventory/:userId
@@ -35,6 +35,8 @@ export class InventoryRoute {
       .post(this.onPostInventoryBuyMenu)
       .put(this.onPutInventoryBuyMenu)
       .delete(this.onDeleteInventoryBuyMenu)
+    app.route('/ping')
+      .get(this.onGetPing)
   }
 
   /**
@@ -74,7 +76,7 @@ export class InventoryRoute {
   /**
    * called when a POST request to /inventory/:userId is done
    * create an inventory for an user
-   * returns 200 if created successfully
+   * returns 201 if created successfully
    * returns 400 if the request is malformed
    * returns 409 if the user already has an inventory
    * returns 500 if an internal unknown error occured
@@ -93,7 +95,7 @@ export class InventoryRoute {
 
     try {
       const newInventory: Inventory = await Inventory.create(reqUserId)
-      return res.status(200).json(newInventory).end()
+      return res.status(201).json(newInventory).end()
     } catch (error) {
       if (error instanceof MongoError) {
         // 11000 is the duplicate key error code
@@ -250,7 +252,7 @@ export class InventoryRoute {
   /**
    * called when a POST request to /inventory/:userId/cosmetics is done
    * create cosmetic slots for an user
-   * returns 200 if created successfully
+   * returns 201 if created successfully
    * returns 400 if the request is malformed
    * returns 409 if the user already has cosmetic slots
    * returns 500 if an internal unknown error occured
@@ -269,7 +271,7 @@ export class InventoryRoute {
 
     try {
       const newCosmetics: InventoryCosmetics = await InventoryCosmetics.create(reqUserId)
-      return res.status(200).json(newCosmetics).end()
+      return res.status(201).json(newCosmetics).end()
     } catch (error) {
       if (error instanceof MongoError) {
         // 11000 is the duplicate key error code
@@ -387,7 +389,7 @@ export class InventoryRoute {
   /**
    * called when a POST request to /inventory/:userId/loadout is done
    * create loadouts for an user
-   * returns 200 if created successfully
+   * returns 201 if created successfully
    * returns 400 if the request is malformed
    * returns 409 if the user already has loadouts
    * returns 500 if an internal unknown error occured
@@ -406,7 +408,7 @@ export class InventoryRoute {
 
     try {
       const newLoadouts: InventoryLoadout[] = await InventoryLoadout.create(reqUserId)
-      return res.status(200).json(newLoadouts).end()
+      return res.status(201).json(newLoadouts).end()
     } catch (error) {
       if (error instanceof MongoError) {
         // 11000 is the duplicate key error code
@@ -524,7 +526,7 @@ export class InventoryRoute {
   /**
    * called when a POST request to /inventory/:userId/buymenu is done
    * creates a buy menu for an user
-   * returns 200 if created successfully
+   * returns 201 if created successfully
    * returns 400 if the request is malformed
    * returns 409 if the user already has a buy menu
    * returns 500 if an internal unknown error occured
@@ -543,7 +545,7 @@ export class InventoryRoute {
 
     try {
       const newBuyMenu: InventoryBuyMenu = await InventoryBuyMenu.create(reqUserId)
-      return res.status(200).json(newBuyMenu).end()
+      return res.status(201).json(newBuyMenu).end()
     } catch (error) {
       if (error instanceof MongoError) {
         // 11000 is the duplicate key error code
@@ -622,5 +624,16 @@ export class InventoryRoute {
       LogInstance.error(error)
       return res.status(500).end()
     }
+  }
+
+  /**
+   * called when a GET request to /ping is done
+   * tells the requester that we are alive
+   * returns 200
+   * @param req the request data
+   * @param res the response data
+   */
+  private async onGetPing(req: express.Request, res: express.Response): Promise<void> {
+    return res.status(200).end()
   }
 }

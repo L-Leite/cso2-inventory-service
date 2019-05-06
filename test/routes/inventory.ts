@@ -30,7 +30,7 @@ mocha.describe('User\'s inventory', (): void => {
                 chai.request(serviceInstance.app)
                     .post('/inventory/123456')
                     .end((err: Error, res: superagent.Response): void => {
-                        res.should.be.status(200)
+                        res.should.be.status(201)
                         res.body.should.be.jsonSchema({
                             type: 'object',
                             required: [
@@ -460,7 +460,7 @@ mocha.describe('User\'s inventory', (): void => {
                 chai.request(serviceInstance.app)
                     .post('/inventory/123456/cosmetics')
                     .end((err: Error, res: superagent.Response): void => {
-                        res.should.be.status(200)
+                        res.should.be.status(201)
                         res.body.should.be.jsonSchema({
                             type: 'object',
                             required: [
@@ -822,7 +822,7 @@ mocha.describe('User\'s inventory', (): void => {
                 chai.request(serviceInstance.app)
                     .post('/inventory/123456/loadout')
                     .end((err: Error, res: superagent.Response): void => {
-                        res.should.be.status(200)
+                        res.should.be.status(201)
                         res.body.should.be.jsonSchema({
                             type: 'array',
                             minItems: 3,
@@ -1207,7 +1207,7 @@ mocha.describe('User\'s inventory', (): void => {
                 chai.request(serviceInstance.app)
                     .post('/inventory/123456/buymenu')
                     .end((err: Error, res: superagent.Response): void => {
-                        res.should.be.status(200)
+                        res.should.be.status(201)
                         res.body.should.be.jsonSchema({
                             type: 'object',
                             required: [
