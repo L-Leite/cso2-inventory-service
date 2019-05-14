@@ -7,12 +7,20 @@ import 'app-module-path/register'
 
 import { ServiceInstance } from 'serviceinstance'
 
+let instance: ServiceInstance = null
+
 /**
  * start a service instance
  */
 async function startService() {
-  const instance: ServiceInstance = new ServiceInstance()
+  instance = new ServiceInstance()
   instance.listen()
 }
 
 startService()
+
+process.on('SIGINT', () => {
+  instance.stop()
+}).on('SIGTERM', () => {
+  instance.stop()
+})
