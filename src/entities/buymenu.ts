@@ -16,7 +16,7 @@ export interface ISetBuyMenuBody {
 /**
  * an user's ingame buy menu
  */
-export class InventoryBuyMenu extends typegoose.Typegoose {
+export class InventoryBuyMenu {
     /**
      * get an user's buy menu
      * @param userId the owning user's ID
@@ -96,4 +96,4 @@ export class InventoryBuyMenu extends typegoose.Typegoose {
     public equipment: number[]
 }
 
-export const InventoryBuyMenuModel = new InventoryBuyMenu().getModelForClass(InventoryBuyMenu)
+export const InventoryBuyMenuModel = typegoose.getModelForClass(InventoryBuyMenu)

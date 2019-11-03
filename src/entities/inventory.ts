@@ -6,7 +6,7 @@ import { InventoryItem } from 'entities/item'
 /**
  * represents an user's inventory
  */
-export class Inventory extends typegoose.Typegoose {
+export class Inventory {
     /**
      * get an user's inventory items
      * @param userId the owning user's ID
@@ -126,4 +126,4 @@ export class Inventory extends typegoose.Typegoose {
     public items?: InventoryItem[]
 }
 
-const InventoryModel = new Inventory().getModelForClass(Inventory)
+const InventoryModel = typegoose.getModelForClass(Inventory)

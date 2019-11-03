@@ -6,7 +6,7 @@ import { InventoryItem } from 'entities/item'
 /**
  * holds items to give to new users
  */
-export class DefaultInventory extends typegoose.Typegoose {
+export class DefaultInventory {
     /**
      * setup the DefaultInventory table
      */
@@ -112,4 +112,4 @@ export class DefaultInventory extends typegoose.Typegoose {
     public equipment: number[]
 }
 
-const DefaultInventoryModel = new DefaultInventory().getModelForClass(DefaultInventory)
+const DefaultInventoryModel = typegoose.getModelForClass(DefaultInventory)

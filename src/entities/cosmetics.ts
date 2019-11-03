@@ -16,7 +16,7 @@ export interface ISetCosmeticsBody {
 /**
  * stores an user's equipped cosmetic items
  */
-export class InventoryCosmetics extends typegoose.Typegoose {
+export class InventoryCosmetics {
     /**
      * get an user's equipped cosmetics
      * @param userId the owning user's ID
@@ -95,4 +95,4 @@ export class InventoryCosmetics extends typegoose.Typegoose {
     public sprayItem: number
 }
 
-export const InventoryCosmeticsModel = new InventoryCosmetics().getModelForClass(InventoryCosmetics)
+export const InventoryCosmeticsModel = typegoose.getModelForClass(InventoryCosmetics)

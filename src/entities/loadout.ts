@@ -18,7 +18,7 @@ export interface ISetLoadoutBody {
  * stores an user's loadout items at a slot
  */
 @typegoose.index({ ownerId: 1, loadoutNum: 1 }, { unique: true })
-export class InventoryLoadout extends typegoose.Typegoose {
+export class InventoryLoadout {
     /**
      * get an user's loadout
      * @param loadoutNum the loadout's index number
@@ -102,4 +102,4 @@ export class InventoryLoadout extends typegoose.Typegoose {
     public smoke?: number
 }
 
-export const InventoryLoadoutModel = new InventoryLoadout().getModelForClass(InventoryLoadout)
+export const InventoryLoadoutModel = typegoose.getModelForClass(InventoryLoadout)
