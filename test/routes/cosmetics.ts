@@ -18,10 +18,10 @@ chai.use(chaiJson)
 mocha.describe('User\'s cosmetics', (): void => {
     let serviceInstance: ServiceInstance
 
-    mocha.before((): void => {
+    mocha.before(async (): Promise<void> => {
         // start service instance
         serviceInstance = new ServiceInstance()
-        serviceInstance.listen()
+        await serviceInstance.listen()
     })
 
     mocha.describe('POST /inventory/:userId/cosmetics', (): void => {
@@ -301,7 +301,7 @@ mocha.describe('User\'s cosmetics', (): void => {
         mocha.it('Should 404 when changing an unexisting user\'s cosmetic slots',
             (done: mocha.Done): void => {
                 chai.request(serviceInstance.app)
-                    .put('/inventory/123456/cosmetics')
+                    .put('/inventory/876543/cosmetics')
                     .send({
                         headItem: 10046,
                         gloveItem: 30009,
@@ -386,7 +386,7 @@ mocha.describe('User\'s cosmetics', (): void => {
         })
     })
 
-    mocha.after((): void => {
-        serviceInstance.stop()
+    mocha.after(async (): Promise<void> => {
+        await serviceInstance.stop()
     })
 })

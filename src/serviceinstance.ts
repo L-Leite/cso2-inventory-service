@@ -44,8 +44,6 @@ export class ServiceInstance {
   constructor() {
     ServiceInstance.checkEnvVars()
 
-    this.setupDb()
-
     this.app = express()
 
     this.applyConfigs()
@@ -57,7 +55,9 @@ export class ServiceInstance {
   /**
    * start the service
    */
-  public listen(): void {
+  public async listen(): Promise<void> {
+    await this.setupDb()
+
     this.server = this.app.listen(this.app.get('port'))
     LogInstance.info('Started inventory service')
     LogInstance.info('Listening at ' + this.app.get('port'))
@@ -66,36 +66,24 @@ export class ServiceInstance {
   /**
    * stop the service instance
    */
-  public stop(): void {
+  public async stop(): Promise<void> {
     this.server.close()
-    mongoose.disconnect()
+    await mongoose.disconnect()
   }
 
   /**
    * setup the database connection
    */
-  private setupDb(): void {
+  private async setupDb(): Promise<void> {
     const dbUri: string = 'mongodb://' + process.env.DB_HOST
       + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME
 
     // create a mongo connection
-    mongoose.connect(dbUri, { useNewUrlParser: true })
-      .then(() => {
-        LogInstance.info('Connected to ' + dbUri + ' db sucessfully')
-      })
-      .catch((reason) => {
-        LogInstance.error('Could not connect to db')
-        LogInstance.error(reason)
-        process.exit(2)
-      })
+    await mongoose.connect(dbUri, { useNewUrlParser: true })
+    LogInstance.info('Connected to ' + dbUri + ' db sucessfully')
 
     // create a document with the default inventory if needed
-    DefaultInventory.get()
-      .then((res: DefaultInventory) => {
-        if (res == null) {
-          DefaultInventory.create()
-        }
-      })
+    await DefaultInventory.initialize()
   }
 
   /**

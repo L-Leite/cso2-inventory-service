@@ -18,10 +18,10 @@ chai.use(chaiJson)
 mocha.describe('User\'s loadout', (): void => {
     let serviceInstance: ServiceInstance
 
-    mocha.before((): void => {
+    mocha.before(async (): Promise<void> => {
         // start service instance
         serviceInstance = new ServiceInstance()
-        serviceInstance.listen()
+        await serviceInstance.listen()
     })
 
     mocha.describe('POST /inventory/:userId/loadout', (): void => {
@@ -356,7 +356,6 @@ mocha.describe('User\'s loadout', (): void => {
                             return done()
                         })
                 })
-
         })
 
         mocha.it('Should delete an user\'s loadouts',
@@ -409,7 +408,7 @@ mocha.describe('User\'s loadout', (): void => {
         })
     })
 
-    mocha.after((): void => {
-        serviceInstance.stop()
+    mocha.after(async (): Promise<void> => {
+        await serviceInstance.stop()
     })
 })

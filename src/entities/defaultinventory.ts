@@ -8,6 +8,17 @@ import { InventoryItem } from 'entities/item'
  */
 export class DefaultInventory extends typegoose.Typegoose {
     /**
+     * setup the DefaultInventory table
+     */
+    public static async initialize(): Promise<void> {
+        const entries: DefaultInventory[] = await DefaultInventoryModel.find()
+
+        if (entries.length === 0) {
+            this.create()
+        }
+    }
+
+    /**
      * get an user's inventory items
      * @param userId the owning user's ID
      * @returns a promise to the user's inventory items

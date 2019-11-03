@@ -15,13 +15,13 @@ chai.should()
 chai.use(chaiHttp)
 chai.use(chaiJson)
 
-mocha.describe('User\'s inventory', (): void => {
+mocha.describe('User\'s a inventory', (): void => {
     let serviceInstance: ServiceInstance
 
-    mocha.before((): void => {
+    mocha.before(async (): Promise<void> => {
         // start service instance
         serviceInstance = new ServiceInstance()
-        serviceInstance.listen()
+        await serviceInstance.listen()
     })
 
     mocha.describe('POST /inventory/:userId', (): void => {
@@ -454,7 +454,7 @@ mocha.describe('User\'s inventory', (): void => {
         })
     })
 
-    mocha.after((): void => {
-        serviceInstance.stop()
+    mocha.after(async (): Promise<void> => {
+        await serviceInstance.stop()
     })
 })
