@@ -81,7 +81,7 @@ export class InventoryLoadout extends typegoose.Typegoose {
     public static async remove(userId: number): Promise<boolean> {
         const res = await InventoryLoadoutModel.deleteMany({ ownerId: userId })
             .exec()
-        return res.ok === 1 && res.n === 1
+        return res.ok === 1 && res.n === 3
     }
 
     @typegoose.prop({ required: true })
