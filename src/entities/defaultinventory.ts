@@ -1,4 +1,4 @@
-import * as typegoose from 'typegoose'
+import * as typegoose from '@typegoose/typegoose'
 
 import { DefaultInventoryItems } from 'entities/defaultitems'
 import { InventoryItem } from 'entities/item'
