@@ -9,7 +9,12 @@ import { LogInstance } from 'log/loginstance'
 import { MorganToWinstonStream } from 'log/morgan2winston'
 
 import { DefaultInventory } from 'entities/defaultinventory'
+
+import { InventoryBuyMenuRoute } from 'routes/buymenu'
+import { InventoryCosmeticsRoute } from 'routes/cosmetics'
 import { InventoryRoute } from 'routes/inventory'
+import { InventoryLoadoutRoute } from 'routes/loadout'
+import { PingRoute } from 'routes/ping'
 
 /**
  * the service's entrypoint
@@ -111,6 +116,11 @@ export class ServiceInstance {
    */
   private setupRoutes(): void {
     const inventory: InventoryRoute = new InventoryRoute(this.app)
+    const buyMenu: InventoryBuyMenuRoute = new InventoryBuyMenuRoute(this.app)
+    const cosmetics: InventoryCosmeticsRoute = new InventoryCosmeticsRoute(this.app)
+    const loadout: InventoryLoadoutRoute = new InventoryLoadoutRoute(this.app)
+
+    const ping: PingRoute = new PingRoute(this.app)
   }
 
   /**
