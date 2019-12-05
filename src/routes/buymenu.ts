@@ -8,7 +8,7 @@ import { InventoryBuyMenu } from 'entities/buymenu'
 /**
  * handles requests to /inventory/:userId/buymenu
  */
-export class InventoryRoute {
+export class InventoryBuyMenuRoute {
   constructor(app: express.Express) {
     app.route('/inventory/:userId/buymenu')
       .get(this.onGetInventoryBuyMenu)
