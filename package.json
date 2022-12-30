@@ -55,7 +55,7 @@
     "gulp-typedoc": "^2.2.3",
     "gulp-typescript": "^5.0.1",
     "gulp-util": "^3.0.8",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "ts-node": "^7.0.1",
     "tslint": "^5.20.1",
     "typedoc": "^0.15.3",
